@@ -3,25 +3,25 @@
   height: 100vh;
   float: left;
   color: #ffffff;
-  &__group-list{
+  .side-header{
     height: 100px;
     width: 300px;
     background-color: #253141;
     display: flex;
     align-items: center;
     padding: 0 20px;
-    &__user{
+    &__box{
       height: 20px;
       width: 260px;
       display: flex;
       justify-content: space-between;
       font-weight: bold;
 
-      &--username{
+      &__username{
         color: #ffffff;
         font-size: 16px;
       }
-      &--icons{
+      &__menu{
         width: 60px;
         float: right;
         margin-left: auto;
@@ -39,7 +39,7 @@
 
 .groups{
   height: calc(100vh - 100px);
-  &__group{
+  .group{
     padding: 20px 20px 0;
     margin-bottom: 40px;
     font-weight: bold;

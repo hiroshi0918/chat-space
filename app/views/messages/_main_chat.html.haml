@@ -1,36 +1,36 @@
 .chat-main
-  .chat-main__group-list
-    .chat-main__group-list__left-box
-      .chat-main__group-list__left-box__group-name
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__group-name
         test
-      .chat-main__group-list__left-box__commenter
+      .main-header__left-box__commenter
         aaa
-    =link_to "#", class: "chat-main__group-list__editer" do
+    =link_to "#", class: "main-header__editer" do
       Edit
-  .chat-main__message-list
-    .chat-main__message-list__messages
-      .chat-main__message-list__messages__upper-info
-        %p.chat-main__message-list__messages__upper-info__talker
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
           aaaa
-        %p.chat-main__message-list__messages__upper-info__date
+        %p.message__upper-info__date
           2019/12/05
-      %p.chat-main__message-list__messages__message
+      %p.message__text
         コメント
-    .chat-main__message-list__messages
-      .chat-main__message-list__messages__upper-info
-        %p.chat-main__message-list__messages__upper-info__talker
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
           aaaa
-        %p.chat-main__message-list__messages__upper-info__date
+        %p.message__upper-info__date
           2019/12/05
-      %p.chat-main__message-list__messages__message
+      %p.message__text
         コメント
-  .chat-main__message-form
-    %form{action: "/",class:"chat-main__message-form__new-message",  method: "post"}
+  .form
+    %form{action: "/",class:"new-message",  method: "post"}
       %input{name:"utf8", type:"hidden", value:"✓"}
-      .chat-main__message-form__new-message__input-box
-        %input{type: "text",placeholder:"type a message", class:"chat-main__message-form__new-message__input-box__text"}
-        %label.chat-main__message-form__new-message__input-box__image
+      .new-message__input-box
+        %input{type: "text",placeholder:"type a message", class:"new-message__input-box__text"}
+        %label.new-message__input-box__image
           %i{class: "far fa-image"}
-          %input{type:"file",class:"chat-main__message-form__new-message__input-box__image__file"}
-      %input{type:"submit", name:"commit", value:"Send", class:"chat-main__message-form__new-message__submit"}
+          %input{type:"file",class:"new-message__input-box__image__file"}
+      %input{type:"submit", name:"commit", value:"Send", class:"new-message__submit"}
       

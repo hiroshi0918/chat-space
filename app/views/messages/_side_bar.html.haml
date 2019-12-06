@@ -1,12 +1,12 @@
-.side-bar
-  .side-bar__group-list
-    .side-bar__group-list__user
-      .side-bar__group-list__user--username
+.chat-side
+  .chat-side__group-list
+    .chat-side__group-list__user
+      .chat-side__group-list__user--username
         = current_user.name
-      .side-bar__group-list__user--icons
-        =link_to "#", class: "side-bar__group-list__user--icons--new-group" do
+      .chat-side__group-list__user--icons
+        =link_to "#", class: "chat-side__group-list__user--icons--new-group" do
           = icon('fas', 'pen-square', class: 'icon')
-        =link_to "edit_user_path(current_user)", class: "side-bar__group-list__user--icons--setting" do
+        =link_to "edit_user_path(current_user)", class: "chat-side__group-list__user--icons--setting" do
           = icon('fas', 'cog', class: 'icon')
   .groups
     .groups__group

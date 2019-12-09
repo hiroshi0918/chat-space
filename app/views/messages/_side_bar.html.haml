@@ -1,21 +1,21 @@
-.side-bar
-  .side-bar__group-list
-    .side-bar__group-list__user
-      .side-bar__group-list__user--username
-        masa
-      .side-bar__group-list__user--icons
-        =link_to "#", class: "side-bar__group-list__user--icons--new-group" do
-          = icon('fas', 'edit')
-        =link_to "#", class: "side-bar__group-list__user--icons--setting" do
-          = icon('fas', 'cog')
+.chat-side
+  .side-header
+    .side-header__box
+      .side-header__box__username
+        = current_user.name
+      .side-header__box__menu
+        =link_to "#", class: "side-header__box__menu--new-group" do
+          = icon('fas', 'pen-square', class: 'icon')
+        =link_to "edit_user_path(current_user)", class: "side-header__box__menu--setting" do
+          = icon('fas', 'cog', class: 'icon')
   .groups
-    .groups__group
-      .groups__group--group-name
+    .group
+      .group--group-name
         techcamp
-      .groups__group--latest-message
+      .group--latest-message
         hello
-    .groups__group
-      .groups__group--group-name
+    .group
+      .group--group-name
         techcamp
-      .groups__group--latest-message
+      .group--latest-message
         hello

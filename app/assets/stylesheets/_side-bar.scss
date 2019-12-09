@@ -39,14 +39,17 @@
 
 .groups{
   height: calc(100vh - 100px);
-  .group{
-    padding: 20px 20px 0;
-    margin-bottom: 40px;
-    font-weight: bold;
-    &--group-name{
-      font-size: 15px;
-      margin-bottom: 5px;
-    }
-    &--latest-message{
-      font-size: 11px;
-    }}}
+  a{
+    color: #ffffff;
+    text-decoration: none;
+    .group{
+      padding: 20px 20px 0;
+      margin-bottom: 40px;
+      font-weight: bold;
+      &--group-name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &--latest-message{
+        font-size: 11px;
+    }}}}

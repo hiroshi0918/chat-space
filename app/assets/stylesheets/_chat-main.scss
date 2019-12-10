@@ -66,36 +66,40 @@
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    &__new-message{
-      display: flex;
-      &__input-box{
+    .new_message{
+      display: flex;      
+      &__mask{
         position: relative;
         width: 100%;
-        &__text{
+        &__type_box{
           height: 50px;
           width: 100%;
           padding: 0 40px 0 10px;
           color: #434a54;
-          border-style: none;
-
-        }
+          border-style: none;}
         &__image{
           font-size: 1.3rem;
           position: absolute;
           top: 10px;
           right: 10px;
           cursor: pointer;
-          &__file{
+          .icon{
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;}
+          .hidden{
             display: none;
           }
-        } }
-    &__submit{
-      width: 100px;
-      height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: #38aef0;
-      color: white;
-      cursor: pointer;
-      
+         }}
+      &__submit{
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        cursor: pointer;
+        
         }}}}

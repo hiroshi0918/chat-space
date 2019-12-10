@@ -26,9 +26,9 @@
         コメント
   .form
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = icon('fas', 'image', class: 'icon')
+      .new_message__mask
+        = f.text_field :content, class: 'new_message__mask__type_box', placeholder: 'type a message'
+        = f.label :image, class: 'new_message__mask__image' do
+          = icon('far fa-image', class: 'icon')
           = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+      = f.submit 'Send', class: 'new_message__submit'

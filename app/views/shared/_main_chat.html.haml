@@ -8,22 +8,8 @@
     =link_to "#", class: "main-header__editer" do
       Edit
   .messages
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          aaaa
-        %p.message__upper-info__date
-          2019/12/05
-      %p.message__text
-        コメント
-    .message
-      .message__upper-info
-        %p.message__upper-info__talker
-          aaaa
-        %p.message__upper-info__date
-          2019/12/05
-      %p.message__text
-        コメント
+    - @messages.each do |message|
+      = render partial: "message", locals: { message: message }
   .form
     = form_for [@group, @message] do |f|
       .new_message__mask

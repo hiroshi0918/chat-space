@@ -66,7 +66,7 @@
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 40px;
-    .new-message{
+    &__new-message{
       display: flex;
       &__input-box{
         position: relative;
@@ -89,13 +89,13 @@
             display: none;
           }
         } }
-      &__submit{
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
+    &__submit{
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
       
         }}}}

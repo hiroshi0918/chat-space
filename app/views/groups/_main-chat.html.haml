@@ -25,12 +25,10 @@
       %p.message__text
         コメント
   .form
-    %form{action: "/",class:"new-message",  method: "post"}
-      %input{name:"utf8", type:"hidden", value:"✓"}
-      .new-message__input-box
-        %input{type: "text",placeholder:"type a message", class:"new-message__input-box__text"}
-        %label.new-message__input-box__image
-          %i{class: "far fa-image"}
-          %input{type:"file",class:"new-message__input-box__image__file"}
-      %input{type:"submit", name:"commit", value:"Send", class:"new-message__submit"}
-      
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__new-message', placeholder: 'type a message'
+      .input-box
+        = f.label :image, class: 'input-box__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'

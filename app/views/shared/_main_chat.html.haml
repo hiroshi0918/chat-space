@@ -1,0 +1,22 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__group-name
+        = @group.name
+      .main-header__left-box__commenter
+        Member:
+        - @group.users.each do |group|
+          =group.name
+    =link_to edit_group_path(@group.id), class: "main-header__editer" do
+      Edit
+  .messages
+    - @messages.each do |message|
+      = render partial: "message", locals: { message: message }
+  .form
+    = form_for [@group, @message] do |f|
+      .new_message__mask
+        = f.text_field :content, class: 'new_message__mask__type_box', placeholder: 'type a message'
+        = f.label :image, class: 'new_message__mask__image' do
+          = icon('far fa-image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'new_message__submit'

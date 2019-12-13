@@ -5,7 +5,7 @@
         = current_user.name
       .side-header__box__menu
         =link_to new_group_path, class: "side-header__box__menu--new-group" do
-          = icon('fas', 'pen-square', class: 'icon')
+          = icon('fa', 'edit', class: 'icon')
         =link_to edit_user_path(current_user), class: "side-header__box__menu--setting" do
           = icon('fas', 'cog', class: 'icon')
   .groups

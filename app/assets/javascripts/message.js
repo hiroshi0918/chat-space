@@ -3,37 +3,37 @@ $(function(){
   function buildHTML(message){
     if (message.image) {
       var html = `<div class="message">
-                                    <div class="message__upper-info">
-                                    <div class="message__upper-info__talker">
-                                      ${message.name}
-                                      </div>
-                                      <div class="message__upper-info__date">
-                                      ${message.created_at}
-                                      </div>
-                                      </div>
-                                      <div class="message__text">
-                                      <p class="lower-message__content">
-                                        ${message.content}
-                                      </p>
-                                      <img class="lower-message__image" src='${message.image}' alt="98994102fd19907905fbf84d8fc3fa88">
+                    <div class="message__upper-info">
+                      <div class="message__upper-info__talker">
+                        ${message.name}
+                          </div>
+                            <div class="message__upper-info__date">
+                              ${message.created_at}
+                                </div>
                                   </div>
-                                </div>`
+                                <div class="message__text">
+                              <p class="lower-message__content">
+                            ${message.content}
+                          </p>
+                        <img class="lower-message__image" src='${message.image}' alt="98994102fd19907905fbf84d8fc3fa88">
+                      </div>
+                      </div>`
     } else {
-      var html =                        `<div class="message">
-                                        <div class="message__upper-info">
-                                        <div class="message__upper-info__talker">
-                                        ${message.name}
-                                          </div>
-                                          <div class="message__upper-info__date">
-                                          ${message.created_at}
-                                          </div>
-                                          </div>
-                                          <div class="message__text">
-                                          <p class="lower-message__content">
-                                          ${message.content}
-                                          </p>
-                                        </div>
-                                        </div>`
+      var html =  `<div class="message">
+                    <div class="message__upper-info">
+                      <div class="message__upper-info__talker">
+                        ${message.name}
+                          </div>
+                            <div class="message__upper-info__date">
+                              ${message.created_at}
+                                </div>
+                              </div>
+                            <div class="message__text">
+                          <p class="lower-message__content">
+                        ${message.content}
+                      </p>
+                    </div>
+                  </div>`
     }
     return html
   }
